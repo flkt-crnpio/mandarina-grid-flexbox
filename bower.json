@@ -1,0 +1,20 @@
+{
+  "name": "mandarina-grid-flexbox",
+  "description": "grid flex module form mandarina",
+  "main": "dev/index.html",
+  "authors": [
+    "flkt <flkt.crnpio@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/flkt-crnpio/mandarina-grid-flexbox",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mandarina": "https://github.com/flkt-crnpio/mandarina.git"
+  }
+}

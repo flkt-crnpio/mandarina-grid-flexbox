@@ -17,11 +17,11 @@
   },
   "homepage": "https://github.com/flkt-crnpio/mandarina-grid-flexbox#readme",
   "devDependencies": {
+    "bower": "^1.8.0",
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "mandarina": "git+https://github.com/flkt-crnpio/mandarina.git"
+    "gulp-sourcemaps": "^2.6.0"
   }
 }
