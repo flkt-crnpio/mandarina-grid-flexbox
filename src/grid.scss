@@ -1,0 +1,146 @@
+/* grid */
+.flex,
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    &.nowrap {
+        flex-wrap: nowrap;
+    }
+    &.wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    &.y-start {
+        align-items: flex-start;
+    }
+    &.y-end {
+        align-items: flex-end;
+    }
+    &.y-center {
+        align-items: center;
+    }
+    &.y-baseline {
+        align-items: baseline;
+    }
+    &.y-stretch {
+        align-items: stretch;
+    }
+
+    &.x-start {
+        justify-content: flex-start;
+    }
+    &.x-end {
+        justify-content: flex-end;
+    }
+    &.x-center {
+        justify-content: center;
+    }
+    &.x-around {
+        justify-content: space-around;
+    }
+    &.x-between {
+        justify-content: space-between;
+    }
+    &.x-evenly {
+        justify-content: space-evenly;
+    }
+}
+
+.flex-row {
+    margin-left: - ($mandarina-layout-space * .5);
+    margin-right: - ($mandarina-layout-space * .5);
+
+    .m {
+        margin-left: $mandarina-layout-space * .5;
+        margin-right: $mandarina-layout-space * .5;
+    }
+
+    .f-0 {
+        flex: 0 0;
+        margin-left: $mandarina-layout-space * .5;
+        margin-right: $mandarina-layout-space * .5;
+    }
+    .f-1 {
+        flex: 1 0;
+        margin-left: $mandarina-layout-space * .5;
+        margin-right: $mandarina-layout-space * .5;
+    }
+
+    @for $i from 1 through $mandarina-grid-quantity {
+        @for $j from 1 through $i {
+            .col-#{$j}_#{$i} {
+                flex: 0 0 calc(100% * #{$j}/#{$i} - #{$mandarina-layout-space});
+                margin-left: $mandarina-layout-space * .5;
+                margin-right: $mandarina-layout-space * .5;
+                max-width: calc(100% * #{$j}/#{$i} - #{$mandarina-layout-space});
+            }
+        }
+    }
+}
+
+.flex {
+    .f-0 {
+        flex: 0 0;
+    }
+    .f-1 {
+        flex: 1 0;
+    }
+
+    @for $i from 1 through $mandarina-grid-quantity {
+        @for $j from 1 through $i {
+            .col-#{$j}_#{$i} {
+                flex: 0 0 calc(100% * #{$j}/#{$i});
+                max-width: calc(100% * #{$j}/#{$i});
+            }
+        }
+    }
+}
+
+@each $name, $minwidth in $mandarina-queries {
+    @media screen and (min-width: $minwidth) {
+        .flex-row {
+            @for $i from 1 through $mandarina-grid-quantity {
+                @for $j from 1 through $i {
+                    .col-#{$name}-#{$j}_#{$i}  {
+                        flex: 0 0 calc(100% * #{$j}/#{$i} - #{$mandarina-layout-space});
+                        margin-left: $mandarina-layout-space * .5;
+                        margin-right: $mandarina-layout-space * .5;
+                        max-width: calc(100% * #{$j}/#{$i} - #{$mandarina-layout-space});
+                    }
+                }
+            }
+        }
+        .flex {
+            @for $i from 1 through $mandarina-grid-quantity {
+                @for $j from 1 through $i {
+                    .col-#{$name}-#{$j}_#{$i}  {
+                        flex: 0 0 calc(100% * #{$j}/#{$i});
+                        max-width: calc(100% * #{$j}/#{$i});
+                    }
+                }
+            }
+        }
+    }
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+
+    &.reverse {
+        flex-direction: column-reverse;
+    }
+
+    .f-1 {
+        flex: 1;
+    }
+}
