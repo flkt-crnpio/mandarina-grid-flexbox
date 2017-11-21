@@ -1,0 +1,34 @@
+// queries
+//
+$mandarina-queries:
+    (xxs, 20rem), //phone
+    (xs, 30rem), //phonelandscape
+    (s, 48rem), //tablet
+    (m, 64rem), //laptop
+    (l, 75rem), //mdpi
+    (xl, 90rem), //hidpi
+    (xxl, 120rem); //hd
+
+
+// layout
+//
+$mandarina-layout-space: 30px;
+
+$mandarina-widths:
+    (xxs, 20rem, 90%, inherit, inherit),
+    (xs, 30rem, 90%, inherit, inherit),
+    (s, 48rem, 90%, inherit, inherit),
+    (m, 64rem, 90%, inherit, inherit),
+    (l, 75rem, 80%, inherit, inherit)
+    (xl, 90rem, 75%, inherit, inherit),
+    (xxl, 120rem, 70%, inherit, inherit);
+
+
+// grid
+//
+$mandarina-grid-quantity: 10;
+
+
+// margins
+//
+$mandarina-layout-margins-quantity: 10;
