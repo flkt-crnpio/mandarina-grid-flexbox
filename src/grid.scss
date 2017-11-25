@@ -1,13 +1,8 @@
 /* grid */
 .flex,
-.flex-row {
+.flex-row,
+.flex-column {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    &.reverse {
-        flex-direction: row-reverse;
-    }
 
     &.wrap {
         flex-wrap: wrap;
@@ -52,6 +47,21 @@
     }
     &.x-evenly {
         justify-content: space-evenly;
+    }
+
+    @for $i from 1 through $mandarina-grid-quantity {
+        > .order-#{$i} {
+            order: #{$i};
+        }
+    }
+}
+
+.flex,
+.flex-row {
+    flex-direction: row;
+
+    &.reverse {
+        flex-direction: row-reverse;
     }
 }
 
@@ -133,14 +143,17 @@
 }
 
 .flex-column {
-    display: flex;
     flex-direction: column;
 
     &.reverse {
         flex-direction: column-reverse;
     }
 
+    > .row-0 {
+        flex: 0 0;
+    }
+
     > .row-1 {
-        flex: 1;
+        flex: 1 0;
     }
 }
