@@ -35,19 +35,13 @@ gulp.task('sass-dist', function(){
         .pipe(gulp.dest('dist'))
 });
 
-gulp.task('sass-mandarina', function(){
-    return gulp.src(['src/mandarina/src/mandarina.scss'])
-        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-        .pipe(gulp.dest('dev/css'));
-});
-
 gulp.task('sass-grid', function(){
     return gulp.src(['src/mandarina_grid_flexbox.scss'])
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(gulp.dest('dev/css'));
 });
 
-gulp.task('sass-dev', ['sass-mandarina','sass-grid'], function (done) {
+gulp.task('sass-dev', ['sass-grid'], function (done) {
     browserSync.reload();
     done();
 });

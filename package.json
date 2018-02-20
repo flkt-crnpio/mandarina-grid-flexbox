@@ -1,11 +1,8 @@
 {
   "name": "mandarina-grid-flexbox",
-  "version": "0.0.1",
-  "description": "grid flex module form mandarina",
+  "version": "0.1.0",
+  "description": "grid flex module",
   "main": "dev/index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flkt-crnpio/mandarina-grid-flexbox.git"
