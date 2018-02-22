@@ -1,18 +1,18 @@
 {
-  "name": "mandarina-grid-flexbox",
-  "version": "0.1.0",
-  "description": "grid flex module",
+  "name": "m.grid",
+  "version": "1.0.0",
+  "description": "grid flexbox module for m projects",
   "main": "dev/index.html",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flkt-crnpio/mandarina-grid-flexbox.git"
+    "url": "git+https://github.com/flkt-crnpio/m.grid.git"
   },
   "author": "flkt <flkt.crnpio@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/flkt-crnpio/mandarina-grid-flexbox/issues"
+    "url": "https://github.com/flkt-crnpio/m.grid/issues"
   },
-  "homepage": "https://github.com/flkt-crnpio/mandarina-grid-flexbox#readme",
+  "homepage": "https://github.com/flkt-crnpio/m.grid#readme",
   "devDependencies": {
     "bower": "^1.8.0",
     "browser-sync": "^2.18.13",
@@ -20,5 +20,8 @@
     "gulp-cssnano": "^2.1.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0"
+  },
+  "dependencies": {
+    "m.normalize": "git+https://github.com/flkt-crnpio/m.normalize.git"
   }
 }
