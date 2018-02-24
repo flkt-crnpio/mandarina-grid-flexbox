@@ -1,0 +1,26 @@
+// paddings
+@for $p from 0 through $m-spacevariations {
+    .p-#{$p} {
+        padding: $m-spacebase * $p;
+    }
+    .p-x-#{$p} {
+        padding-left: $m-spacebase * $p;
+        padding-right: $m-spacebase * $p;
+    }
+    .p-y-#{$p} {
+        padding-bottom: $m-spacebase * $p;
+        padding-top: $m-spacebase * $p;
+    }
+    .p-l-#{$p} {
+        padding-left: $m-spacebase * $p;
+    }
+    .p-r-#{$p} {
+        padding-right: $m-spacebase * $p;
+    }
+    .p-t-#{$p} {
+        padding-top: $m-spacebase * $p;
+    }
+    .p-b-#{$p} {
+        padding-bottom: $m-spacebase * $p;
+    }
+}
