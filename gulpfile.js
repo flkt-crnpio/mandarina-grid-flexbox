@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 
 gulp.task('dist', ['sass-dist']);
 
-gulp.task('dev', ['sass-dev','copy'], function() {
+gulp.task('dev', ['copy', 'sass-dev'], function() {
     browserSync.init({
         server: {
             baseDir: "./dev"
@@ -25,7 +25,7 @@ gulp.task('dev', ['sass-dev','copy'], function() {
 });
 
 gulp.task('sass-dist', function(){
-    return gulp.src(['src/mandarina_grid_flexbox.scss'])
+    return gulp.src(['src/grid.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(cssnano({
@@ -36,7 +36,7 @@ gulp.task('sass-dist', function(){
 });
 
 gulp.task('sass-grid', function(){
-    return gulp.src(['src/mandarina_grid_flexbox.scss'])
+    return gulp.src(['src/grid.scss'])
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(gulp.dest('dev/css'));
 });
