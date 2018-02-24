@@ -1,0 +1,25 @@
+.flex {
+    @for $i from 1 through $m-grid {
+        @for $j from 1 through $i {
+            > .space-l-#{$j}_#{$i} {
+                margin-left: calc(100% * #{$j}/#{$i});
+            }
+            > .space-r-#{$j}_#{$i} {
+                margin-right: calc(100% * #{$j}/#{$i});
+            }
+        }
+    }
+}
+
+.flex-row {
+    @for $i from 1 through $m-grid {
+        @for $j from 1 through $i {
+            > .space-l-#{$j}_#{$i} {
+                margin-left: calc(100% * #{$j}/#{$i} + #{$m-spacebase} * .5);
+            }
+            > .space-r-#{$j}_#{$i} {
+                margin-right: calc(100% * #{$j}/#{$i} + #{$m-spacebase} * .5);
+            }
+        }
+    }
+}
