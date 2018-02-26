@@ -1,10 +1,11 @@
 # m.grid #
-Grid flex module under MIT license
 
-## Setup for edit ##
-Require npm gulp and sass
-Install dependencies
+Grid Flexbox Module for M projects under MIT license
 
-```sh
-npm install
-```
+
+## Tested and working on ##
+* Brave
+* Chrome
+* Firefox
+* Opera
+* Safari

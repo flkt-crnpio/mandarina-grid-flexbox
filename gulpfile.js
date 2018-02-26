@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     cssnano = require('gulp-cssnano'),
+    rename = require('gulp-rename'),
     browserSync = require('browser-sync').create(),
     supportedbrowsers = [
         'last 2 versions',
@@ -14,7 +15,7 @@ var gulp = require('gulp'),
 
 gulp.task('dist', ['sass-dist']);
 
-gulp.task('dev', ['copy', 'sass-dev'], function() {
+gulp.task('dev', ['normalize', 'sass-dev'], function() {
     browserSync.init({
         server: {
             baseDir: "./dev"
@@ -31,6 +32,7 @@ gulp.task('sass-dist', function(){
         .pipe(cssnano({
             autoprefixer: {browsers: supportedbrowsers, add: true}
         }))
+        .pipe(rename({ extname: '.min.css' }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist'))
 });
@@ -46,7 +48,7 @@ gulp.task('sass-dev', ['sass-grid'], function (done) {
     done();
 });
 
-gulp.task('copy', function() {
+gulp.task('normalize', function() {
     return gulp.src('node_modules/m.normalize/normalize.min.css')
         .pipe(gulp.dest('dev/css/'));
 });
