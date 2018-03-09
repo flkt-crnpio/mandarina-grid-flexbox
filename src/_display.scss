@@ -1,0 +1,20 @@
+// display
+@each $name, $query-min, $query-max in $m-queries {
+    @media screen and (min-width: $query-min) and (max-width: $query-max){
+        .hidden-#{$name} {
+            display: none;
+        }
+        .show-inline-#{$name} {
+            display: inline-block;
+        }
+        .show-block-#{$name} {
+            display: block;
+        }
+        .show-flex-#{$name} {
+            display: flex;
+        }
+        .show-inline-flex-#{$name} {
+            display: inline-flex;
+        }
+    }
+}
