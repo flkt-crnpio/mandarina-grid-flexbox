@@ -19,8 +19,8 @@
     margin-right: auto;
 }
 
-@each $name, $query, $width, $minw, $maxw in $m-queries {
-    @media screen and (min-width: $query) {
+@each $name, $query-min, $query-max, $width, $minw, $maxw in $m-queries {
+    @media screen and (min-width: $query-min) and (max-width: $query-max) {
         .container-x {
             min-width: $minw;
             max-width: $maxw;

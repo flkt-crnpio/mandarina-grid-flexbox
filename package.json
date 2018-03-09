@@ -1,6 +1,6 @@
 {
   "name": "m.grid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "grid flexbox module for m projects",
   "main": "dev/index.html",
   "scripts": {
