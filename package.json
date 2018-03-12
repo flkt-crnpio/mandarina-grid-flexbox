@@ -7,6 +7,14 @@
     "watch": "gulp dev",
     "build": "gulp dist"
   },
+  "keywords": [
+    "mol",
+    "css",
+    "flkt-mol",
+    "scss-module",
+    "grid",
+    "grid-system"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flkt-crnpio/m.grid.git"
