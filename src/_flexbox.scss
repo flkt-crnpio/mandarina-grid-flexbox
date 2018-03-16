@@ -166,3 +166,19 @@
         }
     }
 }
+
+.self-start {
+    align-self: flex-start;
+}
+.self-end {
+    align-self: flex-end;
+}
+.self-baseline {
+    align-self: baseline;
+}
+.self-center {
+    align-self: center;
+}
+.self-stretch {
+    align-self: stretch;
+}
