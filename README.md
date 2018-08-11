@@ -1,6 +1,6 @@
 # m.grid
+Mol Grid es el módulo de cuadrícula de MolFramework. Utiliza las propiedades de Flexbox. Administra los tamaños de los contenedores, tamaño de las celdas, su alineación, el espacio entre las ellas y la cantidad de celdas por fila o columna.
 
-Mol Grid Flexbox es el módulo de cuadrícula de MolFramework. Administra los tamaños de los contenedores, tamaño de las celdas, su alineación, el espacio entre las ellas y la cantidad de celdas por fila o columna.
 
 Puedes agregar el módulo MolGrid corriendo la siguiente línea en la consola
 ```sh
@@ -20,7 +20,7 @@ Dentro de la carpeta `src` están los archivos de las clases y estilos para cada
 
 Para ver actualizados los estilos de la librería, corre
 ```sh
-gulp dev
+gulp
 ```
 
 Una vez que termines la edición, utiliza la siguiente línea para obtener los archivos comprimidos
@@ -38,5 +38,4 @@ ___
 
 ___
 
-
-( ﾟ▽ﾟ)/ Cualquier pregunta, comentario, sugerencia y/o corrección, escríbanme a [@flktcrnpio](https://twitter.com/flktcrnpio) en Twitter.
+( ﾟ▽ﾟ)/ Cualquier pregunta, comentario, sugerencia y/o corrección, escríbanme a [@MolFramework](https://twitter.com/MolFramework) en Twitter.
