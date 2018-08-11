@@ -1,6 +1,6 @@
 {
   "name": "m.grid",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Grid Flexbox file for MolFramework",
   "main": "dev/index.html",
   "scripts": {
@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/flkt-crnpio/m.grid#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.24.6",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
