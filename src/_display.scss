@@ -18,3 +18,23 @@
         }
     }
 }
+
+@each $name, $query-min, $query-max in $m-queries {
+    @media screen and (min-width: $query-min) {
+        .hidden-from-#{$name} {
+            display: none;
+        }
+        .show-inline-from-#{$name} {
+            display: inline-block;
+        }
+        .show-block-from-#{$name} {
+            display: block;
+        }
+        .show-flex-from-#{$name} {
+            display: flex;
+        }
+        .show-inline-from-flex-#{$name} {
+            display: inline-flex;
+        }
+    }
+}

@@ -49,3 +49,58 @@
         margin-bottom: -($m-spacebase) * $m;
     }
 }
+
+@each $name, $query-min, $query-max in $m-queries {
+    @media screen and (min-width: $query-min) {
+        @for $m from 0 through $m-spacevariations {
+            .m-#{$name}-#{$m} {
+                margin: $m-spacebase * $m;
+            }
+            .m-x-#{$name}-#{$m} {
+                margin-left: $m-spacebase * $m;
+                margin-right: $m-spacebase * $m;
+            }
+            .m-y-#{$name}-#{$m} {
+                margin-bottom: $m-spacebase * $m;
+                margin-top: $m-spacebase * $m;
+            }
+            .m-l-#{$name}-#{$m} {
+                margin-left: $m-spacebase * $m;
+            }
+            .m-r-#{$name}-#{$m} {
+                margin-right: $m-spacebase * $m;
+            }
+            .m-t-#{$name}-#{$m} {
+                margin-top: $m-spacebase * $m;
+            }
+            .m-b-#{$name}-#{$m} {
+                margin-bottom: $m-spacebase * $m;
+            }
+
+            // negative margins
+            .m--#{$name}-#{$m} {
+                margin: -($m-spacebase) * $m;
+            }
+            .m--x-#{$name}-#{$m} {
+                margin-left: -($m-spacebase) * $m;
+                margin-right: -($m-spacebase) * $m;
+            }
+            .m--y-#{$name}-#{$m} {
+                margin-bottom: -($m-spacebase) * $m;
+                margin-top: -($m-spacebase) * $m;
+            }
+            .m--l-#{$name}-#{$m} {
+                margin-left: -($m-spacebase) * $m;
+            }
+            .m--r-#{$name}-#{$m} {
+                margin-right: -($m-spacebase) * $m;
+            }
+            .m--t-#{$name}-#{$m} {
+                margin-top: -($m-spacebase) * $m;
+            }
+            .m--b-#{$name}-#{$m} {
+                margin-bottom: -($m-spacebase) * $m;
+            }
+        }
+    }
+}
