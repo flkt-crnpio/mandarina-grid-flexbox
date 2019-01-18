@@ -1,38 +1,32 @@
 {
-  "name": "m.grid",
-  "version": "1.2.1",
-  "description": "Grid Flexbox file for MolFramework",
-  "main": "dev/index.html",
+  "name": "mol.grid",
+  "version": "0.0.0",
+  "description": "Flexbox Grid Module for Mol Framework",
   "scripts": {
-    "watch": "gulp dev",
-    "build": "gulp dist"
+    "dist": "sass scss/grid.scss:dist/grid.min.css --style compressed",
+    "docs": "npm run scss | npm run start",
+    "start": "browser-sync start --server 'docs' --files 'docs'",
+    "scss": "sass --watch scss/grid.scss:docs/grid.css --style expanded"
   },
   "keywords": [
     "mol",
     "mol-framework",
     "css",
     "sass",
-    "scss-module",
-    "grid",
-    "grid-system"
+    "scss",
+    "scss-module"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flkt-crnpio/m.grid.git"
+    "url": "git+https://github.com/MolFramework/mol.grid.git"
   },
   "author": "flkt <flkt.crnpio@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/flkt-crnpio/m.grid/issues"
+    "url": "https://github.com/MolFramework/mol.grid/issues"
   },
-  "homepage": "https://github.com/flkt-crnpio/m.grid#readme",
   "devDependencies": {
-    "browser-sync": "^2.24.6",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "m.normalize": "git+https://github.com/flkt-crnpio/m.normalize.git"
+    "browser-sync": "^2.26.3",
+    "mol.normalize": "git+https://github.com/MolFramework/mol.normalize.git"
   }
 }
