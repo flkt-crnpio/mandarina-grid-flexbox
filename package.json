@@ -1,6 +1,6 @@
 {
   "name": "mol.grid",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Flexbox Grid Module for Mol Framework",
   "scripts": {
     "dist": "sass scss/grid.scss:dist/grid.min.css --style compressed",
