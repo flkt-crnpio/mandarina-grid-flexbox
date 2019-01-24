@@ -25,8 +25,8 @@
   }
 }
 
-@each $name, $query-min, $query-max in $m-queries {
-  @media screen and (min-width: $query-min) {
+@each $name, $query in $m-queries {
+  @media screen and (min-width: $query) {
     @for $p from 0 through $m-spacevariations {
       .p-#{$name}-#{$p} {
         padding: $m-spacebase * $p;

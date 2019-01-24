@@ -50,8 +50,8 @@
   }
 }
 
-@each $name, $query-min, $query-max in $m-queries {
-  @media screen and (min-width: $query-min) {
+@each $name, $query in $m-queries {
+  @media screen and (min-width: $query) {
     @for $m from 0 through $m-spacevariations {
       .m-#{$name}-#{$m} {
         margin: $m-spacebase * $m;
@@ -76,7 +76,6 @@
       .m-b-#{$name}-#{$m} {
         margin-bottom: $m-spacebase * $m;
       }
-
       // negative margins
       .m--#{$name}-#{$m} {
         margin: -($m-spacebase) * $m;

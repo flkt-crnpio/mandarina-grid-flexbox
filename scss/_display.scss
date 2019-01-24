@@ -1,27 +1,7 @@
 // display
 @each $name, $query-min, $query-max in $m-queries {
-  @media screen and (min-width: $query-min) and (max-width: $query-max){
-    .hidden-#{$name} {
-      display: none;
-    }
-    .show-inline-#{$name} {
-      display: inline-block;
-    }
-    .show-block-#{$name} {
-      display: block;
-    }
-    .show-flex-#{$name} {
-      display: flex;
-    }
-    .show-inline-flex-#{$name} {
-      display: inline-flex;
-    }
-  }
-}
-
-@each $name, $query-min, $query-max in $m-queries {
   @media screen and (min-width: $query-min) {
-    .hidden-from-#{$name} {
+    .hide-from-#{$name} {
       display: none;
     }
     .show-inline-from-#{$name} {
@@ -33,7 +13,47 @@
     .show-flex-from-#{$name} {
       display: flex;
     }
-    .show-inline-from-flex-#{$name} {
+    .show-inline-flex-from-#{$name} {
+      display: inline-flex;
+    }
+  }
+}
+
+@each $name, $query-min, $query-max in $m-queries {
+  @media screen and (min-width: $query-min) and (max-width: $query-max){
+    .hide-in-#{$name} {
+      display: none;
+    }
+    .show-inline-in-#{$name} {
+      display: inline-block;
+    }
+    .show-block-in-#{$name} {
+      display: block;
+    }
+    .show-flex-in-#{$name} {
+      display: flex;
+    }
+    .show-inline-flex-in-#{$name} {
+      display: inline-flex;
+    }
+  }
+}
+
+@each $name, $query-min, $query-max in $m-queries {
+  @media screen and (max-width: $query-max) {
+    .hide-behind-#{$name} {
+      display: none;
+    }
+    .show-inline-behind-#{$name} {
+      display: inline-block;
+    }
+    .show-block-behind-#{$name} {
+      display: block;
+    }
+    .show-flex-behind-#{$name} {
+      display: flex;
+    }
+    .show-inline-flex-behind-#{$name} {
       display: inline-flex;
     }
   }
