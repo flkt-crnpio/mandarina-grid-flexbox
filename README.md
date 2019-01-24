@@ -46,12 +46,12 @@ mol.normalize/
 │   └── index.html
 └── scss/
     ├── _containers.scss
-		├── _display.scss
-		├── _flexbox.scss
-		├── _grid.scss
-		├── _margins.scss
-		├── _paddings.scss
-		├── _spacing.scss
+    ├── _display.scss
+    ├── _flexbox.scss
+    ├── _grid.scss
+    ├── _margins.scss
+    ├── _paddings.scss
+    ├── _spacing.scss
     ├── _vars.scss
     └── grid.scss
 ```
