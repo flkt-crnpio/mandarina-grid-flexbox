@@ -36,7 +36,7 @@ Edita los archivos dentro de la carpeta de **scss**
 
 #### Archivos
 ```text
-mol.normalize/
+mol.grid/
 ├── dist/
 │   ├── grid.min.css
 │   └── grid.min.css.map
