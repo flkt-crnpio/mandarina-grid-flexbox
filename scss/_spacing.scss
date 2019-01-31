@@ -8,6 +8,12 @@
       > .space-r-#{$j}_#{$i} {
         margin-right: calc(100% * #{$j}/#{$i});
       }
+      > .space--l-#{$j}_#{$i} {
+        margin-left: calc(0px - (100% * #{$j}/#{$i}));
+      }
+      > .space--r-#{$j}_#{$i} {
+        margin-right: calc(0px - (100% * #{$j}/#{$i}));
+      }
     }
   }
 }
@@ -20,6 +26,12 @@
       }
       > .space-r-#{$j}_#{$i} {
         margin-right: calc(100% * #{$j}/#{$i} + #{$m-spacebase} * .5);
+      }
+      > .space--l-#{$j}_#{$i} {
+        margin-left: calc(0px - (100% * #{$j}/#{$i} + #{$m-spacebase} * .5));
+      }
+      > .space--r-#{$j}_#{$i} {
+        margin-right: calc(0px - (100% * #{$j}/#{$i} + #{$m-spacebase} * .5));
       }
     }
   }
@@ -36,6 +48,12 @@
           > .space-r-#{$name}-#{$j}_#{$i} {
             margin-right: calc(100% * #{$j}/#{$i});
           }
+          > .space--l-#{$j}_#{$i} {
+            margin-left: calc(0px - (100% * #{$j}/#{$i}));
+          }
+          > .space--r-#{$j}_#{$i} {
+            margin-right: calc(0px - (100% * #{$j}/#{$i}));
+          }
         }
       }
     }
@@ -48,6 +66,12 @@
           }
           > .space-r-#{$name}-#{$j}_#{$i} {
             margin-right: calc(100% * #{$j}/#{$i} + #{$m-spacebase} * .5);
+          }
+          > .space--l-#{$j}_#{$i} {
+            margin-left: calc(0px - (100% * #{$j}/#{$i} + #{$m-spacebase} * .5));
+          }
+          > .space--r-#{$j}_#{$i} {
+            margin-right: calc(0px - (100% * #{$j}/#{$i} + #{$m-spacebase} * .5));
           }
         }
       }
