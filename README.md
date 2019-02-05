@@ -45,12 +45,14 @@ mol.grid/
 │   ├── grid.css.map
 │   └── index.html
 └── scss/
+    ├── _cols.scss
     ├── _containers.scss
     ├── _display.scss
-    ├── _flexbox.scss
+    ├── _flex.scss
     ├── _grid.scss
     ├── _margins.scss
     ├── _paddings.scss
+    ├── _rows.scss
     ├── _spacing.scss
     ├── _vars.scss
     └── grid.scss

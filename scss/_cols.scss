@@ -1,0 +1,103 @@
+// cols
+.flex-row {
+  margin-left: - ($m-spacebase * .5);
+  margin-right: - ($m-spacebase * .5);
+  > .m {
+    margin-left: $m-spacebase * .5;
+    margin-right: $m-spacebase * .5;
+  }
+  > .col-0 {
+    flex: 0 0;
+    margin-left: $m-spacebase * .5;
+    margin-right: $m-spacebase * .5;
+  }
+  > .col-1 {
+    flex: 1 0;
+    margin-left: $m-spacebase * .5;
+    margin-right: $m-spacebase * .5;
+  }
+  @for $i from 1 through $m-grid {
+    @for $j from 1 through $i {
+      > .col-#{$j}_#{$i} {
+        flex: 0 0 calc(100% * #{$j}/#{$i} - #{$m-spacebase});
+        margin-left: $m-spacebase * .5;
+        margin-right: $m-spacebase * .5;
+        max-width: calc(100% * #{$j}/#{$i} - #{$m-spacebase});
+      }
+    }
+  }
+}
+@each $name, $query in $m-queries {
+  @media screen and (min-width: $query) {
+    .flex-row,
+    .flex-row-#{$name} {
+      margin-left: - ($m-spacebase * .5);
+      margin-right: - ($m-spacebase * .5);
+      > .m {
+        margin-left: $m-spacebase * .5;
+        margin-right: $m-spacebase * .5;
+      }
+      > .col-0 {
+        flex: 0 0;
+        margin-left: $m-spacebase * .5;
+        margin-right: $m-spacebase * .5;
+      }
+      > .col-1 {
+        flex: 1 0;
+        margin-left: $m-spacebase * .5;
+        margin-right: $m-spacebase * .5;
+      }
+      @for $i from 1 through $m-grid {
+        @for $j from 1 through $i {
+          > .col-#{$j}_#{$i},
+          > .col-#{$name}-#{$j}_#{$i} {
+            flex: 0 0 calc(100% * #{$j}/#{$i} - #{$m-spacebase});
+            margin-left: $m-spacebase * .5;
+            margin-right: $m-spacebase * .5;
+            max-width: calc(100% * #{$j}/#{$i} - #{$m-spacebase});
+          }
+        }
+      }
+    }
+  }
+}
+
+.flex {
+  > .col-0 {
+    flex: 0 0;
+  }
+  > .col-1 {
+    flex: 1 0;
+  }
+  @for $i from 1 through $m-grid {
+    @for $j from 1 through $i {
+      > .col-#{$j}_#{$i} {
+        flex: 0 0 calc(100% * #{$j}/#{$i});
+        max-width: calc(100% * #{$j}/#{$i});
+      }
+    }
+  }
+}
+
+@each $name, $query in $m-queries {
+  @media screen and (min-width: $query) {
+    .flex,
+    .flex-#{$name} {
+      > .col-0 {
+        flex: 0 0;
+      }
+      > .col-1 {
+        flex: 1 0;
+      }
+      @for $i from 1 through $m-grid {
+        @for $j from 1 through $i {
+          > .col-#{$j}_#{$i},
+          > .col-#{$name}-#{$j}_#{$i} {
+            flex: 0 0 calc(100% * #{$j}/#{$i});
+            max-width: calc(100% * #{$j}/#{$i});
+          }
+        }
+      }
+    }
+  }
+}

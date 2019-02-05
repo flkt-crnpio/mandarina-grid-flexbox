@@ -1,0 +1,171 @@
+// flex
+.flex,
+.flex-row,
+.flex-col {
+  box-sizing: border-box;
+  display: flex;
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.nowrap {
+    flex-wrap: nowrap;
+  }
+  &.wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+  &.y-start {
+    align-items: flex-start;
+  }
+  &.y-end {
+    align-items: flex-end;
+  }
+  &.y-center {
+    align-items: center;
+  }
+  &.y-baseline {
+    align-items: baseline;
+  }
+  &.y-stretch {
+    align-items: stretch;
+  }
+  &.x-start {
+    justify-content: flex-start;
+  }
+  &.x-end {
+    justify-content: flex-end;
+  }
+  &.x-center {
+    justify-content: center;
+  }
+  &.x-around {
+    justify-content: space-around;
+  }
+  &.x-between {
+    justify-content: space-between;
+  }
+  &.x-evenly {
+    justify-content: space-evenly;
+  }
+  @for $g from 1 through $m-grid {
+    > .order-#{$g} {
+      order: #{$g};
+    }
+  }
+}
+
+.flex,
+.flex-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  &.row-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.flex-col {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  &.col-reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+.self-start {
+  align-self: flex-start;
+}
+.self-end {
+  align-self: flex-end;
+}
+.self-baseline {
+  align-self: baseline;
+}
+.self-center {
+  align-self: center;
+}
+.self-stretch {
+  align-self: stretch;
+}
+
+@each $name, $query in $m-queries {
+  @media screen and (min-width: $query) {
+    .flex-#{$name},
+    .flex-row-#{$name},
+    .flex-col-#{$name} {
+      box-sizing: border-box;
+      display: flex;
+      &.wrap-#{$name} {
+        flex-wrap: wrap;
+      }
+      &.nowrap-#{$name} {
+        flex-wrap: nowrap;
+      }
+      &.wrap-reverse-#{$name} {
+        flex-wrap: wrap-reverse;
+      }
+      &.y-#{$name}-start {
+        align-items: flex-start;
+      }
+      &.y-#{$name}-end {
+        align-items: flex-end;
+      }
+      &.y-#{$name}-center {
+        align-items: center;
+      }
+      &.y-#{$name}-baseline {
+        align-items: baseline;
+      }
+      &.y-#{$name}-stretch {
+        align-items: stretch;
+      }
+      &.x-#{$name}-start {
+        justify-content: flex-start;
+      }
+      &.x-#{$name}-end {
+        justify-content: flex-end;
+      }
+      &.x-#{$name}-center {
+        justify-content: center;
+      }
+      &.x-#{$name}-around {
+        justify-content: space-around;
+      }
+      &.x-#{$name}-between {
+        justify-content: space-between;
+      }
+      &.x-#{$name}-evenly {
+        justify-content: space-evenly;
+      }
+    }
+    .flex-#{$name},
+    .flex-row-#{$name} {
+      flex-direction: row;
+      flex-wrap: wrap;
+      &.row-reverse-#{$name} {
+        flex-direction: row-reverse;
+      }
+    }
+    .flex-col-#{$name} {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      &.col-reverse-#{$name} {
+        flex-direction: column-reverse;
+      }
+    }
+
+    .self-#{$name}-start {
+      align-self: flex-start;
+    }
+    .self-#{$name}-end {
+      align-self: flex-end;
+    }
+    .self-#{$name}-baseline {
+      align-self: baseline;
+    }
+    .self-#{$name}-center {
+      align-self: center;
+    }
+    .self-#{$name}-stretch {
+      align-self: stretch;
+    }
+  }
+}
