@@ -136,6 +136,7 @@
         justify-content: space-evenly;
       }
     }
+
     .flex-#{$name},
     .flex-row-#{$name} {
       flex-direction: row;
@@ -144,6 +145,7 @@
         flex-direction: row-reverse;
       }
     }
+
     .flex-col-#{$name} {
       flex-direction: column;
       flex-wrap: nowrap;

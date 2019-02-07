@@ -13,15 +13,43 @@
       }
     }
   }
-}
-
-@each $name, $query in $m-queries {
-  @media screen and (min-width: $query) {
-    .flex-col {
+  @each $name, $query in $m-queries {
+    @media screen and (min-width: $query) {
       @for $i from 1 through $m-grid {
         @for $j from 1 through $i {
           > .row-#{$name}-#{$j}_#{$i} {
             height: calc(100vh * #{$j}/#{$i});
+          }
+        }
+      }
+    }
+  }
+}
+
+@each $name, $query in $m-queries {
+  @media screen and (min-width: $query) {
+    .flex-col-#{$name} {
+      > .row-0 {
+        flex: 0 0;
+      }
+      > .row-1 {
+        flex: 1 0;
+      }
+      @for $i from 1 through $m-grid {
+        @for $j from 1 through $i {
+          > .row-#{$j}_#{$i} {
+            height: calc(100vh * #{$j}/#{$i});
+          }
+        }
+      }
+      @each $name, $query in $m-queries {
+        @media screen and (min-width: $query) {
+          @for $i from 1 through $m-grid {
+            @for $j from 1 through $i {
+              > .row-#{$name}-#{$j}_#{$i} {
+                height: calc(100vh * #{$j}/#{$i});
+              }
+            }
           }
         }
       }
