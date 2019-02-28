@@ -1,26 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|PT+Serif');
 
 $m-background:  			#fff;
 $m-color:       			#222029;
-$m-primary:						#ff2d39;
-$m-secondary:   			#2a21a5;
-$m-accent:      			#2ed7d1;
+$m-primary:						#112;
+$m-secondary:   			#777;
+$m-accent:      			#00f;
 
 $m-actn-color: 			  $m-primary;
-$m-actn-color-hover:  mix($m-primary, $m-accent, 90%);
+$m-actn-color-hover:  mix($m-primary, $m-accent, 80%);
 $m-actn-font:         $m-background;
 $m-actn-font-hover:   $m-background;
 
-$m-font-family:     	'Open Sans', sans-serif;
-$m-font-size:       	15px;
+$m-font-serif: 				'PT Serif', serif;
+$m-font-family: 			'Open Sans', sans-serif;
+$m-font-size:       	16px;
 $m-font-weight:     	400;
 $m-letter-spacing:  	normal;
 $m-line-height:     	1.5em;
 
 $m-code-family: 			monospace;
 
-$m-h-family: 					'Montserrat', sans-serif;
-$m-h-size:   					20px;
+$m-h-family: 					'Josefin Sans', sans-serif;
+$m-h-size:   					23px;
 $m-h-height: 					1em;
 $m-h-spacing:					normal;
 $m-h-weight: 					600;
@@ -30,7 +31,7 @@ $m-h-transform:  			normal;
 $m-transition:				all 0.3s cubic-bezier(0.465, 0.240, 0.370, 0.825);
 
 // Grid
-$m-queries: // (name, query min-width, query max-width, container width, container min-width, container max-width)
+$m-queries: //(name, query min-width, query max-width, container width, container min-width, container max-width)
     (xxs, 1rem, 29.999rem, 80%, inherit, inherit), //phone
     (xs, 30rem, 47.999rem, 80%, inherit, inherit), //phonelandscape
     (sm, 48rem, 63.999rem, 80%, inherit, inherit), //tablet
@@ -39,6 +40,6 @@ $m-queries: // (name, query min-width, query max-width, container width, contain
     (xl, 90rem, 119.999rem, 60%, inherit, inherit), //hidpi
     (xxl, 120rem, 9999rem, 60%, inherit, inherit); //hd
 
-$m-spacebase:         30px; // tamaño de margenes y espacio entre la retícula
-$m-spacevariations:   10; // cantidad de variaciones de margenes
-$m-grid:              10; // cantidad de columnas en una fila
+$m-spacebase:         40px; //tamaño de margenes y espacio entre la retícula
+$m-spacevariations:   10; //cantidad de variaciones de margenes
+$m-grid:              10; //cantidad de columnas en una fila

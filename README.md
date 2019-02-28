@@ -69,7 +69,7 @@ $m-queries:
     (xl, 90rem, 119.999rem, 75%, inherit, inherit),
     (xxl, 120rem, 9999rem, 70%, inherit, inherit);
 
-$m-spacebase: 30px;
+$m-spacebase: 40px;
 $m-spacevariations: 10;
 $m-grid: 10;
 ```
