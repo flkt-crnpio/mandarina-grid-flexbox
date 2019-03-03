@@ -60,6 +60,12 @@ mol.grid/
 
 #### Variables específicas del grid
 ```text
+$m-spacelement: 20px;
+
+$m-spacebase: 40px;
+$m-spacevariations: 10;
+$m-grid: 10;
+
 $m-queries:
     (xxs, 1rem, 29.999rem, 80%, inherit, inherit),
     (xs, 30rem, 47.999rem, 90%, inherit, inherit),
@@ -68,8 +74,4 @@ $m-queries:
     (lg, 75rem, 89.999rem, 80%, inherit, inherit),
     (xl, 90rem, 119.999rem, 75%, inherit, inherit),
     (xxl, 120rem, 9999rem, 70%, inherit, inherit);
-
-$m-spacebase: 40px;
-$m-spacevariations: 10;
-$m-grid: 10;
 ```
