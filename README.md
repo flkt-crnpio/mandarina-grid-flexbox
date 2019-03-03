@@ -7,18 +7,19 @@ Administra los tamaños de los contenedores, tamaño de las celdas, su alineaci�
 ## Uso e instalación
 Para utilizar el grid en tu proyecto, puedes installarlo con [npm](https://www.npmjs.com/)
 ```sh
-npm install --save https://github.com/MolFramework/mol.grid.git
+npm install https://github.com/MolFramework/mol.grid.git
 ```
-e importarlo en tu hoja de estilos principal, éste archivo contiene el archivo del normalize incrustado en el archivo de distribución del módulo grid
+importa el archivo principal
 ```sh
-@import '~mol.grid/dist/grid.min.css';
-```
-o si prefieres utilizar tu propio archivo de variables, importa
-```sh
-@import '~mol.grid/scss/_grid.scss';
+@import '~mol.grid/scss/grid.scss';
 ```
 y crea un archivo que contenga las mismas variables que las que se encuentran en
 el archivo de `~mol.grid/scss/_vars.scss`
+
+ó si no tienes tiempo, importa el archivo minificado en tu hoja de estilos principal
+```sh
+@import '~mol.grid/dist/grid.min.css';
+```
 
 
 ## Dev
