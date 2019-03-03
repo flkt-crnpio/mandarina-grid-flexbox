@@ -1,52 +1,52 @@
 // margins
 @for $m from 0 through $m-spacevariations {
   .m-#{$m} {
-    margin: $m-spacebase * $m;
+    margin: $m-spacelement * $m;
   }
   .m-x-#{$m} {
-    margin-left: $m-spacebase * $m;
-    margin-right: $m-spacebase * $m;
+    margin-left: $m-spacelement * $m;
+    margin-right: $m-spacelement * $m;
   }
   .m-y-#{$m} {
-    margin-bottom: $m-spacebase * $m;
-    margin-top: $m-spacebase * $m;
+    margin-bottom: $m-spacelement * $m;
+    margin-top: $m-spacelement * $m;
   }
   .m-l-#{$m} {
-    margin-left: $m-spacebase * $m;
+    margin-left: $m-spacelement * $m;
   }
   .m-r-#{$m} {
-    margin-right: $m-spacebase * $m;
+    margin-right: $m-spacelement * $m;
   }
   .m-t-#{$m} {
-    margin-top: $m-spacebase * $m;
+    margin-top: $m-spacelement * $m;
   }
   .m-b-#{$m} {
-    margin-bottom: $m-spacebase * $m;
+    margin-bottom: $m-spacelement * $m;
   }
 
   // negative margins
   .m--#{$m} {
-    margin: -($m-spacebase) * $m;
+    margin: -($m-spacelement) * $m;
   }
   .m--x-#{$m} {
-    margin-left: -($m-spacebase) * $m;
-    margin-right: -($m-spacebase) * $m;
+    margin-left: -($m-spacelement) * $m;
+    margin-right: -($m-spacelement) * $m;
   }
   .m--y-#{$m} {
-    margin-bottom: -($m-spacebase) * $m;
-    margin-top: -($m-spacebase) * $m;
+    margin-bottom: -($m-spacelement) * $m;
+    margin-top: -($m-spacelement) * $m;
   }
   .m--l-#{$m} {
-    margin-left: -($m-spacebase) * $m;
+    margin-left: -($m-spacelement) * $m;
   }
   .m--r-#{$m} {
-    margin-right: -($m-spacebase) * $m;
+    margin-right: -($m-spacelement) * $m;
   }
   .m--t-#{$m} {
-    margin-top: -($m-spacebase) * $m;
+    margin-top: -($m-spacelement) * $m;
   }
   .m--b-#{$m} {
-    margin-bottom: -($m-spacebase) * $m;
+    margin-bottom: -($m-spacelement) * $m;
   }
 }
 
@@ -54,51 +54,51 @@
   @media screen and (min-width: $query) {
     @for $m from 0 through $m-spacevariations {
       .m-#{$name}-#{$m} {
-        margin: $m-spacebase * $m;
+        margin: $m-spacelement * $m;
       }
       .m-x-#{$name}-#{$m} {
-        margin-left: $m-spacebase * $m;
-        margin-right: $m-spacebase * $m;
+        margin-left: $m-spacelement * $m;
+        margin-right: $m-spacelement * $m;
       }
       .m-y-#{$name}-#{$m} {
-        margin-bottom: $m-spacebase * $m;
-        margin-top: $m-spacebase * $m;
+        margin-bottom: $m-spacelement * $m;
+        margin-top: $m-spacelement * $m;
       }
       .m-l-#{$name}-#{$m} {
-        margin-left: $m-spacebase * $m;
+        margin-left: $m-spacelement * $m;
       }
       .m-r-#{$name}-#{$m} {
-        margin-right: $m-spacebase * $m;
+        margin-right: $m-spacelement * $m;
       }
       .m-t-#{$name}-#{$m} {
-        margin-top: $m-spacebase * $m;
+        margin-top: $m-spacelement * $m;
       }
       .m-b-#{$name}-#{$m} {
-        margin-bottom: $m-spacebase * $m;
+        margin-bottom: $m-spacelement * $m;
       }
       // negative margins
       .m--#{$name}-#{$m} {
-        margin: -($m-spacebase) * $m;
+        margin: -($m-spacelement) * $m;
       }
       .m--x-#{$name}-#{$m} {
-        margin-left: -($m-spacebase) * $m;
-        margin-right: -($m-spacebase) * $m;
+        margin-left: -($m-spacelement) * $m;
+        margin-right: -($m-spacelement) * $m;
       }
       .m--y-#{$name}-#{$m} {
-        margin-bottom: -($m-spacebase) * $m;
-        margin-top: -($m-spacebase) * $m;
+        margin-bottom: -($m-spacelement) * $m;
+        margin-top: -($m-spacelement) * $m;
       }
       .m--l-#{$name}-#{$m} {
-        margin-left: -($m-spacebase) * $m;
+        margin-left: -($m-spacelement) * $m;
       }
       .m--r-#{$name}-#{$m} {
-        margin-right: -($m-spacebase) * $m;
+        margin-right: -($m-spacelement) * $m;
       }
       .m--t-#{$name}-#{$m} {
-        margin-top: -($m-spacebase) * $m;
+        margin-top: -($m-spacelement) * $m;
       }
       .m--b-#{$name}-#{$m} {
-        margin-bottom: -($m-spacebase) * $m;
+        margin-bottom: -($m-spacelement) * $m;
       }
     }
   }

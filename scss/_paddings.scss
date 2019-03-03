@@ -1,27 +1,27 @@
 // paddings
 @for $p from 0 through $m-spacevariations {
   .p-#{$p} {
-    padding: $m-spacebase * $p;
+    padding: $m-spacelement * $p;
   }
   .p-x-#{$p} {
-    padding-left: $m-spacebase * $p;
-    padding-right: $m-spacebase * $p;
+    padding-left: $m-spacelement * $p;
+    padding-right: $m-spacelement * $p;
   }
   .p-y-#{$p} {
-    padding-bottom: $m-spacebase * $p;
-    padding-top: $m-spacebase * $p;
+    padding-bottom: $m-spacelement * $p;
+    padding-top: $m-spacelement * $p;
   }
   .p-l-#{$p} {
-    padding-left: $m-spacebase * $p;
+    padding-left: $m-spacelement * $p;
   }
   .p-r-#{$p} {
-    padding-right: $m-spacebase * $p;
+    padding-right: $m-spacelement * $p;
   }
   .p-t-#{$p} {
-    padding-top: $m-spacebase * $p;
+    padding-top: $m-spacelement * $p;
   }
   .p-b-#{$p} {
-    padding-bottom: $m-spacebase * $p;
+    padding-bottom: $m-spacelement * $p;
   }
 }
 
@@ -29,27 +29,27 @@
   @media screen and (min-width: $query) {
     @for $p from 0 through $m-spacevariations {
       .p-#{$name}-#{$p} {
-        padding: $m-spacebase * $p;
+        padding: $m-spacelement * $p;
       }
       .p-x-#{$name}-#{$p} {
-        padding-left: $m-spacebase * $p;
-        padding-right: $m-spacebase * $p;
+        padding-left: $m-spacelement * $p;
+        padding-right: $m-spacelement * $p;
       }
       .p-y-#{$name}-#{$p} {
-        padding-bottom: $m-spacebase * $p;
-        padding-top: $m-spacebase * $p;
+        padding-bottom: $m-spacelement * $p;
+        padding-top: $m-spacelement * $p;
       }
       .p-l-#{$name}-#{$p} {
-        padding-left: $m-spacebase * $p;
+        padding-left: $m-spacelement * $p;
       }
       .p-r-#{$name}-#{$p} {
-        padding-right: $m-spacebase * $p;
+        padding-right: $m-spacelement * $p;
       }
       .p-t-#{$name}-#{$p} {
-        padding-top: $m-spacebase * $p;
+        padding-top: $m-spacelement * $p;
       }
       .p-b-#{$name}-#{$p} {
-        padding-bottom: $m-spacebase * $p;
+        padding-bottom: $m-spacelement * $p;
       }
     }
   }

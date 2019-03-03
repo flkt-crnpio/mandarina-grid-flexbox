@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|PT+Serif');
-
+// normalize
 $m-background:  			#fff;
 $m-color:       			#222029;
 $m-primary:						#112;
@@ -30,7 +30,14 @@ $m-h-transform:  			normal;
 
 $m-transition:				all 0.3s cubic-bezier(0.465, 0.240, 0.370, 0.825);
 
+// core and grid
+$m-spacelement:       20px; //margen en formularios, links, tablas y listas del core. espacio de base para margenes del grid.
+
 // Grid
+$m-spacebase:         40px; //espacio entre la retícula
+$m-spacevariations:   10; //cantidad de variaciones de margenes
+$m-grid:              10; //cantidad de columnas en una fila
+
 $m-queries: //(name, query min-width, query max-width, container width, container min-width, container max-width)
     (xxs, 1rem, 29.999rem, 80%, inherit, inherit), //phone
     (xs, 30rem, 47.999rem, 80%, inherit, inherit), //phonelandscape
@@ -39,7 +46,3 @@ $m-queries: //(name, query min-width, query max-width, container width, containe
     (lg, 75rem, 89.999rem, 70%, inherit, inherit), //mdpi
     (xl, 90rem, 119.999rem, 60%, inherit, inherit), //hidpi
     (xxl, 120rem, 9999rem, 60%, inherit, inherit); //hd
-
-$m-spacebase:         40px; //tamaño de margenes y espacio entre la retícula
-$m-spacevariations:   10; //cantidad de variaciones de margenes
-$m-grid:              10; //cantidad de columnas en una fila
