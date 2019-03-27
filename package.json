@@ -1,7 +1,7 @@
 {
   "name": "mol.grid",
-  "version": "1.0.0",
-  "description": "Flexbox Grid Module for Mol Framework",
+  "version": "2.0.0",
+  "description": "flexbox grid module for mol project",
   "scripts": {
     "dist": "sass scss/grid.scss:dist/grid.min.css --style compressed",
     "docs": "npm run scss | npm run start",
@@ -10,7 +10,7 @@
   },
   "keywords": [
     "mol",
-    "mol-framework",
+    "mol-project",
     "css",
     "sass",
     "scss",
@@ -20,15 +20,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MolFramework/mol.grid.git"
+    "url": "git+https://github.com/mol-project/mol.grid.git"
   },
   "author": "flkt <flkt.crnpio@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MolFramework/mol.grid/issues"
+    "url": "https://github.com/mol-project/mol.grid/issues"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
-    "mol.normalize": "git+https://github.com/MolFramework/mol.normalize.git"
+    "mol.normalize": "git+https://github.com/mol-project/mol.normalize.git#v.2.0.1"
   }
 }
