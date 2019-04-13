@@ -5,12 +5,26 @@
  * https://github.com/mol-project
  */
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|PT+Serif");
-button,
-input,
+summary, body, button,
+input[type=button],
+input[type=reset],
+input[type=submit], output, [type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=file],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
 textarea,
-select,
-output, summary, body {
-  color: #222029;
+select {
+  color: #0a0838;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5em;
@@ -19,30 +33,51 @@ output, summary, body {
 }
 
 button,
-input,
-textarea,
-select,
-output, summary, a {
+input[type=button],
+input[type=reset],
+input[type=submit], summary, a {
   cursor: pointer;
   touch-action: manipulation;
   -ms-touch-action: manipulation;
   text-rendering: optimizeLegibility;
-  transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.89);
+  transition: all 0.27s ease-in-out;
 }
 button:active,
-input:active,
-textarea:active,
-select:active,
-output:active, summary:active, a:active, button:hover,
-input:hover,
-textarea:hover,
-select:hover,
-output:hover, summary:hover, a:hover, button:focus,
-input:focus,
-textarea:focus,
-select:focus,
-output:focus, summary:focus, a:focus {
+input[type=button]:active,
+input[type=reset]:active,
+input[type=submit]:active, summary:active, a:active, button:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover, summary:hover, a:hover, button:focus,
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus, summary:focus, a:focus {
   outline-width: 0;
+}
+
+button,
+input[type=button],
+input[type=reset],
+input[type=submit], output, [type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=file],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea,
+select {
+  display: inline-block;
+  margin: 0.2em 0;
+  padding: 0.4em 0.8em;
+  transition: all 0.27s ease-in-out;
 }
 
 html {
@@ -52,7 +87,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: #ff5252;
   margin: 0;
   padding: 0;
 }
@@ -97,18 +132,15 @@ h6 {
 }
 
 a {
-  background-size: 100% 200%;
-  background-image: linear-gradient(0deg, #32bdc6 50%, transparent 50%);
-  background-position: 0 -1px;
-  color: #32bdc6;
+  color: #e7e6eb;
+  display: inline;
   font-size: inherit;
   font-weight: normal;
   text-decoration: none;
 }
 a.hover, a:active, a:hover, a:focus {
-  color: #fff;
-  background-position: 0 -100%;
-  text-decoration: none;
+  color: white;
+  text-decoration: underline;
 }
 
 article,
@@ -131,12 +163,12 @@ details {
 }
 
 summary {
-  color: rgba(34, 32, 41, 0.5);
+  color: rgba(10, 8, 56, 0.5);
   display: list-item;
   margin: 1.5em 0 0;
 }
 summary:focus, summary:hover {
-  color: #222029;
+  color: #0a0838;
 }
 
 blockquote {
@@ -184,12 +216,12 @@ ins {
 }
 
 abbr {
-  border-bottom: 1px dotted #222029;
+  border-bottom: 1px dotted #0a0838;
   cursor: help;
 }
 
 ins {
-  border-bottom: 1px dashed #222029;
+  border-bottom: 1px dashed #0a0838;
 }
 
 b,
@@ -241,16 +273,16 @@ mark {
 }
 
 code {
-  background: rgba(34, 32, 41, 0.05);
+  background: rgba(10, 8, 56, 0.05);
 }
 
 kbd {
-  background: #131a1a;
-  color: #d4dbdc;
+  background: #23214c;
+  color: #ff6363;
 }
 
 pre {
-  background: rgba(34, 32, 41, 0.05);
+  background: rgba(10, 8, 56, 0.05);
   margin: 1.5em 0;
   padding: 1em;
   display: block;
@@ -261,7 +293,7 @@ pre {
 
 hr {
   border: none;
-  border-top: 1px solid rgba(34, 32, 41, 0.2);
+  border-top: 1px solid rgba(10, 8, 56, 0.2);
   box-sizing: content-box;
   height: 0;
   overflow: visible;
@@ -280,16 +312,6 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-button,
-input,
-textarea,
-select,
-output {
-  padding: 0.4em 0.8em;
-  display: inline-block;
-  margin: 0.2em 0;
-}
-
 [type=date],
 [type=datetime],
 [type=datetime-local],
@@ -306,7 +328,10 @@ output {
 [type=week],
 textarea,
 select {
-  border: 1px solid rgba(34, 32, 41, 0.3);
+  background: #ff5252;
+  border: 1px solid rgba(10, 8, 56, 0.3);
+  border-radius: 2px;
+  color: #0a0838;
 }
 [type=date].hover, [type=date]:focus, [type=date]:hover,
 [type=datetime].hover,
@@ -354,14 +379,23 @@ textarea:hover,
 select.hover,
 select:focus,
 select:hover {
-  border-color: rgba(34, 32, 41, 0.7);
+  border-color: rgba(10, 8, 56, 0.7);
 }
 
 output {
-  border-bottom: 1px solid rgba(34, 32, 41, 0.5);
-  cursor: text;
-  display: inline-block;
+  border-bottom: 1px solid rgba(10, 8, 56, 0.5);
   vertical-align: bottom;
+}
+
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: textfield;
+  background-image: linear-gradient(45deg, transparent 50%, rgba(10, 8, 56, 0.5) 50%), linear-gradient(-45deg, transparent 50%, rgba(10, 8, 56, 0.5) 50%);
+  background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 30px;
 }
 
 [type=file] {
@@ -371,26 +405,13 @@ output {
   padding-bottom: 0.4em;
 }
 
-select {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: textfield;
-  background-image: linear-gradient(45deg, transparent 50%, rgba(34, 32, 41, 0.5) 50%), linear-gradient(-45deg, transparent 50%, rgba(34, 32, 41, 0.5) 50%);
-  background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%;
-  background-size: 5px 5px, 5px 5px;
-  background-repeat: no-repeat;
-  padding-right: 30px;
-  display: inline-block;
-}
-
 button,
 input[type=button],
 input[type=reset],
 input[type=submit] {
-  background-size: 100% 200%;
-  background-image: linear-gradient(0deg, #32bdc6 50%, #fff 50%);
-  background-position: 0 100%;
-  border: 1px solid #32bdc6;
+  background: #ff5252;
+  border-color: #fff;
+  border-radius: 2px;
   color: #fff;
 }
 button.hover, button:focus, button:hover,
@@ -403,8 +424,8 @@ input[type=reset]:hover,
 input[type=submit].hover,
 input[type=submit]:focus,
 input[type=submit]:hover {
-  background-position: 0 0;
-  color: #32bdc6;
+  background: #fff;
+  color: #ff5252;
 }
 
 button::-moz-focus-inner,
@@ -412,10 +433,11 @@ input::-moz-focus-inner,
 textarea::-moz-focus-inner,
 select::-moz-focus-inner {
   border: 0;
+  outline-width: 0;
 }
 
 fieldset {
-  border: 1px solid rgba(34, 32, 41, 0.2);
+  border: 1px solid rgba(10, 8, 56, 0.2);
   margin: 1.5em 0;
   padding: 0.35em 0.7em 0.7em;
   display: block;
@@ -452,7 +474,7 @@ table {
 
 tbody tr,
 tfoot tr {
-  border-top: 1px solid rgba(34, 32, 41, 0.2);
+  border-top: 1px solid rgba(10, 8, 56, 0.2);
 }
 
 th, td {
@@ -488,26 +510,26 @@ th, td {
 
 .readonly,
 [readonly] {
-  border-color: rgba(34, 32, 41, 0.15);
+  border-color: rgba(10, 8, 56, 0.15);
   cursor: default !important;
   pointer-events: none !important;
 }
 
 ::-webkit-selection {
-  background-color: #222029;
-  color: #fff;
+  background-color: #0a0838;
+  color: #ff5252;
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background-color: #222029;
-  color: #fff;
+  background-color: #0a0838;
+  color: #ff5252;
   text-shadow: none;
 }
 
 ::selection {
-  background-color: #222029;
-  color: #fff;
+  background-color: #0a0838;
+  color: #ff5252;
   text-shadow: none;
 }
 
