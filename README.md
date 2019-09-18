@@ -1,41 +1,36 @@
 # Mol Grid
 Administra los tamaños de los contenedores, tamaño de las celdas, su alineación, el espacio entre las ellas y la cantidad de celdas por fila o columna utilizando las propiedades de Flexbox.
-__
-*Este proyecto utiliza [mol.normalize](https://github.com/mol-project/mol.normalize)*
 
 
-## Uso e instalación
-Para utilizar el grid en tu proyecto, puedes installarlo con [npm](https://www.npmjs.com/)
+## Para usar la librería *How to use* ##
+Instala la librería *Install the library*
+
 ```sh
 npm install https://github.com/mol-project/mol.grid.git
 ```
-importa el archivo principal
-```sh
-@import '~mol.grid/scss/grid.scss';
-```
-y crea un archivo que contenga las mismas variables que las que se encuentran en
-el archivo de `~mol.grid/scss/_vars.scss`
+Crea o copia el archivo de [variables](https://github.com/mol-project/mol.grid/blob/master/scss/_vars.scss) para editar los media queries, el espaciado y la cantidad de filas que requieres
+*Create a var file like [this file](https://github.com/mol-project/mol.grid/blob/master/scss/_vars.scss) where you can edit general style aspects*
 
-ó si no tienes tiempo, importa el archivo minificado en tu hoja de estilos principal
+En el archivo general de SCSS de tu proyecto, importa el archivo de variables y el archivo principal de la librería *Import the vars and main files in to your project scss file*
 ```sh
-@import '~mol.grid/dist/grid.min.css';
+@import '_vars.scss';
+@import '~mol.grid/scss/_grid.scss';
 ```
 
+Y compilalo con el resto de tu código, para evitar cargar tantos archivos. *Compile this with your code and avoid to load a lot of files*
 
-## Dev
-Clona el repositorio
+---
+
+## Archivo de distribución *Distribution File* ##
+Descarga el archivo de distrubución y usalo en el head de tu proyecto. *Download the distribution file and added into your head project*
+[mol.grid](https://raw.githubusercontent.com/mol-project/mol.grid/master/dist/grid.min.css)
 ```sh
-git clone https://github.com/mol-project/mol.grid.git
-cd mol.grid/
-npm install
+<link rel="stylesheet" href="mol.normalize.css">
 ```
-Edita los archivos dentro de la carpeta de **scss**
 
-#### Scripts
-- `npm run dist` Actualiza los archivos minificados de la carpeta de distribución **dist**
-- `npm run docs` Levanta un servidor local que se autorefresca con los cambios que se ejecuten en los archivos **scss** y actualiza los archivos de **docs**
+---
 
-#### Archivos
+### Archivos ###
 ```text
 mol.grid/
 ├── dist/
@@ -59,45 +54,57 @@ mol.grid/
     └── grid.scss
 ```
 
-#### Variables
+### Variables ###
 ```text
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|PT+Serif');
+// mol.normalize // mol.grid
+$m-queries: (
+  "phone": (
+    "since": 320px,
+    "until": 767px,
+    "width": 90%,
+    "minwidth": inherit,
+    "maxwidth": inherit,
+    "height": auto,
+    "minheight": 100vh,
+    "maxheight": auto
+  ),
+  "tablet": (
+    "since": 768px,
+    "until": 1024px,
+    "width": 90%,
+    "minwidth": inherit,
+    "maxwidth": inherit,
+    "height": auto,
+    "minheight": 100vh,
+    "maxheight": auto
+  ),
+  "laptop": (
+    "since": 1025px,
+    "until": 1599.99px,
+    "width": 90%,
+    "minwidth": inherit,
+    "maxwidth": inherit,
+    "height": auto,
+    "minheight": 100vh,
+    "maxheight": auto
+  ),
+  "desktop": (
+    "since": 1600px,
+    "until": 99999px,
+    "width": 90%,
+    "minwidth": inherit,
+    "maxwidth": inherit,
+    "height": auto,
+    "minheight": 100vh,
+    "maxheight": auto
+  )
+);
 
-$m-background:  			#ff5252;
-$m-color:       			#0a0838;
-$m-primary:						#fff;
+// mol.core // mol.grid
+$m-spacelement: 20px;
 
-$m-font-family: 			'Open Sans', sans-serif;
-$m-font-size:       	16px;
-$m-font-weight:     	400;
-$m-letter-spacing:  	normal;
-$m-line-height:     	1.5em;
-
-$m-code-family: 			monospace;
-
-$m-em-family: 				'PT Serif', serif;
-
-$m-h-family: 					'Josefin Sans', sans-serif;
-$m-h-size:   					23px;
-$m-h-height: 					1em;
-$m-h-spacing:					normal;
-$m-h-weight: 					600;
-$m-h-style:  					normal;
-$m-h-transform:  			normal;
-
-$m-spacelement:     20px;
-
-$m-spacebase:       40px;
+// mol.grid
+$m-spacebase: 40px;
 $m-spacevariations: 10;
-$m-grid:            10;
-
-$m-queries:
-  (xxs, 1rem,   29.999rem,  80%, inherit, inherit),
-  (xs,  30rem,  47.999rem,  80%, inherit, inherit),
-  (sm,  48rem,  63.999rem,  80%, inherit, inherit),
-  (md,  64rem,  74.999rem,  70%, inherit, inherit),
-  (lg,  75rem,  89.999rem,  70%, inherit, inherit),
-  (xl,  90rem,  119.999rem, 60%, inherit, inherit),
-  (xxl, 120rem, 9999rem,    60%, inherit, inherit);
-
+$m-grid: 10;
 ```
