@@ -13,11 +13,11 @@
       }
     }
   }
-  @each $name, $query in $m-queries {
-    @media screen and (min-width: $query) {
+  @each $label, $map in $m-queries {
+    @media screen and (min-width: map-get($map, "since")) {
       @for $i from 1 through $m-grid {
         @for $j from 1 through $i {
-          > .row-#{$name}-#{$j}_#{$i} {
+          > .row-#{$j}_#{$i}-#{$label} {
             height: calc(100vh * #{$j}/#{$i});
           }
         }
@@ -26,9 +26,9 @@
   }
 }
 
-@each $name, $query in $m-queries {
-  @media screen and (min-width: $query) {
-    .flex-col-#{$name} {
+@each $label, $map in $m-queries {
+  @media screen and (min-width: map-get($map, "since")) {
+    .flex-col-#{$label} {
       > .row-0 {
         flex: 0 0;
       }
@@ -42,11 +42,11 @@
           }
         }
       }
-      @each $name, $query in $m-queries {
-        @media screen and (min-width: $query) {
+      @each $label, $map in $m-queries {
+        @media screen and (min-width: map-get($map, "since")) {
           @for $i from 1 through $m-grid {
             @for $j from 1 through $i {
-              > .row-#{$name}-#{$j}_#{$i} {
+              > .row-#{$j}_#{$i}-#{$label} {
                 height: calc(100vh * #{$j}/#{$i});
               }
             }
