@@ -1,6 +1,7 @@
 # Mol Grid
 Administra los tamaños de los contenedores, tamaño de las celdas, su alineación, el espacio entre las ellas y la cantidad de celdas por fila o columna utilizando las propiedades de Flexbox.
 
+*This project is for management of everything you need from a grid. Is Flexbox based. You can edit all about your grid via variables*
 
 ## Para usar la librería *How to use* ##
 Instala la librería *Install the library*
@@ -18,8 +19,6 @@ En el archivo general de SCSS de tu proyecto, importa el archivo de variables y 
 ```
 
 Y compilalo con el resto de tu código, para evitar cargar tantos archivos. *Compile this with your code and avoid to load a lot of files*
-
----
 
 ## Archivo de distribución *Distribution File* ##
 Descarga el archivo de distrubución y usalo en el head de tu proyecto. *Download the distribution file and added into your head project*
