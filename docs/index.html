@@ -6,6 +6,7 @@
   <meta name="googlebot" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Mol Grid</title>
+  <link rel="stylesheet" href="mol.normalize.css">
   <link rel="stylesheet" href="grid.css">
   <style media="screen">
     .flex > div,
@@ -25,50 +26,29 @@
   </style>
 </head>
 <body>
-  <div class="main">
+  <div class="container">
     <div class="container-x p-t-10 m-t-1">
       <h1>Mol<br> Grid Flexbox</h1>
-      <hr>
-      <p>
-        // core and grid<br>
-        $m-spacelement:       20px;
-      </p>
-      <p>
-        // grid<br>
-        $m-spacebase:         40px;<br>
-        $m-spacevariations:   10;<br>
-        $m-grid:              10;
-      </p>
-      <p>
-        $m-queries:<br>
-        (xxs, 1rem,   29.999rem,  80%, inherit, inherit), <br>
-        (xs,  30rem,  47.999rem,  80%, inherit, inherit), <br>
-        (sm,  48rem,  63.999rem,  80%, inherit, inherit), <br>
-        (md,  64rem,  74.999rem,  70%, inherit, inherit), <br>
-        (lg,  75rem,  89.999rem,  70%, inherit, inherit), <br>
-        (xl,  90rem,  119.999rem, 60%, inherit, inherit), <br>
-        (xxl, 120rem, 9999rem,    60%, inherit, inherit);
-      </p>
       <hr>
     </div>
 
     <div class="container-x">
       <code>.container-x</code> <code>.flex-row</code>
       <div class="flex-row m-y-1 text-center">
-        <div class="col-1_1 col-sm-1_2 col-md-1_3">
-          <p class="m-1">.col-1_1 .col-sm-1_2 .col-md-1_3</p>
+        <div class="col-1_1 col-1_2-tablet col-1_3-laptop">
+          <p class="m-1">.col-1_1 .col-1_2-tablet .col-1_3-laptop</p>
         </div>
       </div>
     </div>
 
     <div class="container-x">
-      <code>.container-x</code> <code>.flex-col .flex-row-sm</code>
-      <div class="flex-col flex-row-sm m-y-1 text-center">
+      <code>.container-x</code> <code>.flex-col .flex-row-tablet</code>
+      <div class="flex-col flex-row-tablet m-y-1 text-center">
         <div class="col-1_4">
           <p class="m-1">.col-1_4</p>
         </div>
-        <div class="col-1_4 col-md-1_2">
-          <p class="m-1">.col-1_4 .col-md-1_2"</p>
+        <div class="col-1_4 col-1_2-laptop">
+          <p class="m-1">.col-1_4 .col-1_2-laptop</p>
         </div>
         <div class="col-1_4">
           <p class="m-1">.col-1_4</p>
@@ -302,8 +282,8 @@
     </div>
 
     <div class="container-x">
-      <code>.flex-col .page</code>
-      <div class="flex-col page m-y-1">
+      <code>.container-y .flex-col</code>
+      <div class="container-y flex-col m-y-1">
         <div class="row-0">.row-0</div>
         <div class="row-1">.row-1</div>
       </div>
@@ -327,26 +307,26 @@
     <div class="container-x">
       <code>.container-x</code> <code>.flex.x-start.y-start</code>
       <div class="flex x-start y-start m-y-1">
-        <div class="m-l-sm-1 p-3">.m-l-sm-1 .p-3</div>
-        <div class="m-1 p-md-1">.m-1 .p-md-1</div>
-        <div class="m--t-lg-2 m--l-2 p-y-2">.m--t-lg-2 .m--l-2 .p-y-2</div>
+        <div class="m-l-1-tablet p-3">.m-l-1-tablet .p-3</div>
+        <div class="m-1 p-1-laptop">.m-1 .p-1-laptop</div>
+        <div class="m--t-2-desktop m--l-2 p-y-2">.m--t-2-desktop .m--l-2 .p-y-2</div>
       </div>
     </div>
 
     <div class="container-x">
       <code>.container-x</code> <code>.flex.x-center.y-center</code>
       <div class="flex x-center y-center m-y-1">
-        <div class="p-1 m-1 hide-in-sm">.hide-in-sm</div>
-        <div class="p-1 m-1 hide-from-sm">.hide-from-sm</div>
-        <div class="p-1 m-1 hide-behind-sm">.hide-behind-sm</div>
+        <div class="p-1 m-1 hide-in-tablet">.hide-in-tablet</div>
+        <div class="p-1 m-1 hide-since-tablet">.hide-since-tablet</div>
+        <div class="p-1 m-1 hide-until-tablet">.hide-until-tablet</div>
       </div>
     </div>
 
     <div class="container-x">
       <div class="m-y-1">
-        <span class="p-1 m-1 show-block-in-md">span.show-block-in-md</span>
-        <span class="p-1 m-1 show-block-from-md">span.show-block-from-md</span>
-        <span class="p-1 m-1 show-block-behind-md">span.show-block-behind-md</span>
+        <span class="p-1 m-1 show-block-in-laptop">span.show-block-in-laptop</span>
+        <span class="p-1 m-1 show-block-since-laptop">span.show-block-since-laptop</span>
+        <span class="p-1 m-1 show-block-until-laptop">span.show-block-until-laptop</span>
       </div>
     </div>
 
