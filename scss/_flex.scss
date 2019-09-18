@@ -51,6 +51,57 @@
       order: #{$g};
     }
   }
+  @each $label, $map in $m-queries {
+    @media screen and (min-width: map-get($map, "since")) {
+      &.wrap-#{$label} {
+        flex-wrap: wrap;
+      }
+      &.nowrap-#{$label} {
+        flex-wrap: nowrap;
+      }
+      &.wrap-reverse-#{$label} {
+        flex-wrap: wrap-reverse;
+      }
+      &.y-start-#{$label} {
+        align-items: flex-start;
+      }
+      &.y-end-#{$label} {
+        align-items: flex-end;
+      }
+      &.y-center-#{$label} {
+        align-items: center;
+      }
+      &.y-baseline-#{$label} {
+        align-items: baseline;
+      }
+      &.y-stretch-#{$label} {
+        align-items: stretch;
+      }
+      &.x-start-#{$label} {
+        justify-content: flex-start;
+      }
+      &.x-end-#{$label} {
+        justify-content: flex-end;
+      }
+      &.x-center-#{$label} {
+        justify-content: center;
+      }
+      &.x-around-#{$label} {
+        justify-content: space-around;
+      }
+      &.x-between-#{$label} {
+        justify-content: space-between;
+      }
+      &.x-evenly-#{$label} {
+        justify-content: space-evenly;
+      }
+      @for $g from 1 through $m-grid {
+        > .order-#{$g}-#{$label} {
+          order: #{$g};
+        }
+      }
+    }
+  }
 }
 
 .flex,
@@ -60,6 +111,13 @@
   &.row-reverse {
     flex-direction: row-reverse;
   }
+  @each $label, $map in $m-queries {
+    @media screen and (min-width: map-get($map, "since")) {
+      &.row-reverse-#{$label} {
+        flex-direction: row-reverse;
+      }
+    }
+  }
 }
 
 .flex-col {
@@ -67,6 +125,13 @@
   flex-wrap: nowrap;
   &.col-reverse {
     flex-direction: column-reverse;
+  }
+  @each $label, $map in $m-queries {
+    @media screen and (min-width: map-get($map, "since")) {
+      &.col-reverse#{$label} {
+        flex-direction: row-reverse;
+      }
+    }
   }
 }
 
@@ -86,87 +151,92 @@
   align-self: stretch;
 }
 
-@each $name, $query in $m-queries {
-  @media screen and (min-width: $query) {
-    .flex-#{$name},
-    .flex-row-#{$name},
-    .flex-col-#{$name} {
+@each $label, $map in $m-queries {
+  @media screen and (min-width: map-get($map, "since")) {
+    .flex-#{$label},
+    .flex-row-#{$label},
+    .flex-col-#{$label} {
       box-sizing: border-box;
       display: flex;
-      &.wrap-#{$name} {
+      &.wrap-#{$label} {
         flex-wrap: wrap;
       }
-      &.nowrap-#{$name} {
+      &.nowrap-#{$label} {
         flex-wrap: nowrap;
       }
-      &.wrap-reverse-#{$name} {
+      &.wrap-reverse-#{$label} {
         flex-wrap: wrap-reverse;
       }
-      &.y-#{$name}-start {
+      &.y-start-#{$label} {
         align-items: flex-start;
       }
-      &.y-#{$name}-end {
+      &.y-end-#{$label} {
         align-items: flex-end;
       }
-      &.y-#{$name}-center {
+      &.y-center-#{$label} {
         align-items: center;
       }
-      &.y-#{$name}-baseline {
+      &.y-baseline-#{$label} {
         align-items: baseline;
       }
-      &.y-#{$name}-stretch {
+      &.y-stretch-#{$label} {
         align-items: stretch;
       }
-      &.x-#{$name}-start {
+      &.x-start-#{$label} {
         justify-content: flex-start;
       }
-      &.x-#{$name}-end {
+      &.x-end-#{$label} {
         justify-content: flex-end;
       }
-      &.x-#{$name}-center {
+      &.x-center-#{$label} {
         justify-content: center;
       }
-      &.x-#{$name}-around {
+      &.x-around-#{$label} {
         justify-content: space-around;
       }
-      &.x-#{$name}-between {
+      &.x-between-#{$label} {
         justify-content: space-between;
       }
-      &.x-#{$name}-evenly {
+      &.x-evenly-#{$label} {
         justify-content: space-evenly;
+      }
+      @for $g from 1 through $m-grid {
+        > .order-#{$g}-#{$label} {
+          order: #{$g};
+        }
       }
     }
 
-    .flex-#{$name},
-    .flex-row-#{$name} {
+    .flex-#{$label},
+    .flex-row-#{$label} {
       flex-direction: row;
       flex-wrap: wrap;
-      &.row-reverse-#{$name} {
+      &.row-reverse-#{$label} {
         flex-direction: row-reverse;
       }
     }
 
-    .flex-col-#{$name} {
+    .flex-col-#{$label} {
       flex-direction: column;
       flex-wrap: nowrap;
-      &.col-reverse-#{$name} {
+      &.col-reverse-#{$label} {
         flex-direction: column-reverse;
       }
     }
 
-    .self-#{$name}-start {
+    .self-start-#{$label} {
       align-self: flex-start;
     }
-    .self-#{$name}-end {
+    .self-end-#{$label} {
       align-self: flex-end;
     }
-    .self-#{$name}-baseline {
+    .self-baseline-#{$label} {
       align-self: baseline;
     }
-    .self-#{$name}-center {
+    .self-center-#{$label} {
       align-self: center;
     }
-    .self-#{$name}-stretch {
+    .self-stretch-#{$label} {
       align-self: stretch;
     }
   }

@@ -1,59 +1,59 @@
 // display
-@each $name, $query-min, $query-max in $m-queries {
-  @media screen and (min-width: $query-min) {
-    .hide-from-#{$name} {
+@each $label, $map in $m-queries {
+  @media screen and (min-width: map-get($map, "since")) {
+    .hide-since-#{$label} {
       display: none;
     }
-    .show-inline-from-#{$name} {
+    .show-inline-since-#{$label} {
       display: inline-block;
     }
-    .show-block-from-#{$name} {
+    .show-block-since-#{$label} {
       display: block;
     }
-    .show-flex-from-#{$name} {
+    .show-flex-since-#{$label} {
       display: flex;
     }
-    .show-inline-flex-from-#{$name} {
+    .show-inline-flex-since-#{$label} {
       display: inline-flex;
     }
   }
 }
 
-@each $name, $query-min, $query-max in $m-queries {
-  @media screen and (min-width: $query-min) and (max-width: $query-max){
-    .hide-in-#{$name} {
+@each $label, $map in $m-queries {
+  @media screen and (min-width: map-get($map, "since")) and (max-width: map-get($map, "until")){
+    .hide-in-#{$label} {
       display: none;
     }
-    .show-inline-in-#{$name} {
+    .show-inline-in-#{$label} {
       display: inline-block;
     }
-    .show-block-in-#{$name} {
+    .show-block-in-#{$label} {
       display: block;
     }
-    .show-flex-in-#{$name} {
+    .show-flex-in-#{$label} {
       display: flex;
     }
-    .show-inline-flex-in-#{$name} {
+    .show-inline-flex-in-#{$label} {
       display: inline-flex;
     }
   }
 }
 
-@each $name, $query-min, $query-max in $m-queries {
-  @media screen and (max-width: $query-max) {
-    .hide-behind-#{$name} {
+@each $label, $map in $m-queries {
+  @media screen and (max-width: map-get($map, "until")) {
+    .hide-until-#{$label} {
       display: none;
     }
-    .show-inline-behind-#{$name} {
+    .show-inline-until-#{$label} {
       display: inline-block;
     }
-    .show-block-behind-#{$name} {
+    .show-block-until-#{$label} {
       display: block;
     }
-    .show-flex-behind-#{$name} {
+    .show-flex-until-#{$label} {
       display: flex;
     }
-    .show-inline-flex-behind-#{$name} {
+    .show-inline-flex-until-#{$label} {
       display: inline-flex;
     }
   }
