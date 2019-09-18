@@ -25,7 +25,7 @@ Y compilalo con el resto de tu código, para evitar cargar tantos archivos. *Com
 Descarga el archivo de distrubución y usalo en el head de tu proyecto. *Download the distribution file and added into your head project*
 [mol.grid](https://raw.githubusercontent.com/mol-project/mol.grid/master/dist/grid.min.css)
 ```sh
-<link rel="stylesheet" href="mol.normalize.css">
+<link rel="stylesheet" href="mol.grid.css">
 ```
 
 ---
