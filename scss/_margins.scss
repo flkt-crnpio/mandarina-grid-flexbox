@@ -23,8 +23,6 @@
   .m-b-#{$m} {
     margin-bottom: $m-spacelement * $m;
   }
-
-  // negative margins
   .m--#{$m} {
     margin: -($m-spacelement) * $m;
   }
@@ -50,54 +48,53 @@
   }
 }
 
-@each $name, $query in $m-queries {
-  @media screen and (min-width: $query) {
+@each $label, $map in $m-queries {
+  @media screen and (min-width: map-get($map, "since")) {
     @for $m from 0 through $m-spacevariations {
-      .m-#{$name}-#{$m} {
+      .m-#{$m}-#{$label} {
         margin: $m-spacelement * $m;
       }
-      .m-x-#{$name}-#{$m} {
+      .m-x-#{$m}-#{$label} {
         margin-left: $m-spacelement * $m;
         margin-right: $m-spacelement * $m;
       }
-      .m-y-#{$name}-#{$m} {
+      .m-y-#{$m}-#{$label} {
         margin-bottom: $m-spacelement * $m;
         margin-top: $m-spacelement * $m;
       }
-      .m-l-#{$name}-#{$m} {
+      .m-l-#{$m}-#{$label} {
         margin-left: $m-spacelement * $m;
       }
-      .m-r-#{$name}-#{$m} {
+      .m-r-#{$m}-#{$label} {
         margin-right: $m-spacelement * $m;
       }
-      .m-t-#{$name}-#{$m} {
+      .m-t-#{$m}-#{$label} {
         margin-top: $m-spacelement * $m;
       }
-      .m-b-#{$name}-#{$m} {
+      .m-b-#{$m}-#{$label} {
         margin-bottom: $m-spacelement * $m;
       }
-      // negative margins
-      .m--#{$name}-#{$m} {
+      .m--#{$m}-#{$label} {
         margin: -($m-spacelement) * $m;
       }
-      .m--x-#{$name}-#{$m} {
+      .m--x-#{$m}-#{$label} {
         margin-left: -($m-spacelement) * $m;
         margin-right: -($m-spacelement) * $m;
       }
-      .m--y-#{$name}-#{$m} {
+      .m--y-#{$m}-#{$label} {
         margin-bottom: -($m-spacelement) * $m;
         margin-top: -($m-spacelement) * $m;
       }
-      .m--l-#{$name}-#{$m} {
+      .m--l-#{$m}-#{$label} {
         margin-left: -($m-spacelement) * $m;
       }
-      .m--r-#{$name}-#{$m} {
+      .m--r-#{$m}-#{$label} {
         margin-right: -($m-spacelement) * $m;
       }
-      .m--t-#{$name}-#{$m} {
+      .m--t-#{$m}-#{$label} {
         margin-top: -($m-spacelement) * $m;
       }
-      .m--b-#{$name}-#{$m} {
+      .m--b-#{$m}-#{$label} {
         margin-bottom: -($m-spacelement) * $m;
       }
     }
