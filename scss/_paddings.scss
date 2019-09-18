@@ -25,30 +25,30 @@
   }
 }
 
-@each $name, $query in $m-queries {
-  @media screen and (min-width: $query) {
+@each $label, $map in $m-queries {
+  @media screen and (min-width: map-get($map, "since")) {
     @for $p from 0 through $m-spacevariations {
-      .p-#{$name}-#{$p} {
+      .p-#{$p}-#{$label} {
         padding: $m-spacelement * $p;
       }
-      .p-x-#{$name}-#{$p} {
+      .p-x-#{$p}-#{$label} {
         padding-left: $m-spacelement * $p;
         padding-right: $m-spacelement * $p;
       }
-      .p-y-#{$name}-#{$p} {
+      .p-y-#{$p}-#{$label} {
         padding-bottom: $m-spacelement * $p;
         padding-top: $m-spacelement * $p;
       }
-      .p-l-#{$name}-#{$p} {
+      .p-l-#{$p}-#{$label} {
         padding-left: $m-spacelement * $p;
       }
-      .p-r-#{$name}-#{$p} {
+      .p-r-#{$p}-#{$label} {
         padding-right: $m-spacelement * $p;
       }
-      .p-t-#{$name}-#{$p} {
+      .p-t-#{$p}-#{$label} {
         padding-top: $m-spacelement * $p;
       }
-      .p-b-#{$name}-#{$p} {
+      .p-b-#{$p}-#{$label} {
         padding-bottom: $m-spacelement * $p;
       }
     }
