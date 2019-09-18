@@ -16,6 +16,26 @@
       }
     }
   }
+  @each $label, $map in $m-queries {
+    @media screen and (min-width: map-get($map, "since")) {
+      @for $i from 1 through $m-grid {
+        @for $j from 1 through $i {
+          > .space-l-#{$j}_#{$i}-#{$label} {
+            margin-left: calc(100% * #{$j}/#{$i});
+          }
+          > .space-r-#{$j}_#{$i}-#{$label} {
+            margin-right: calc(100% * #{$j}/#{$i});
+          }
+          > .space--l-#{$j}_#{$i}-#{$label} {
+            margin-left: calc(0px - (100% * #{$j}/#{$i}));
+          }
+          > .space--r-#{$j}_#{$i}-#{$label} {
+            margin-right: calc(0px - (100% * #{$j}/#{$i}));
+          }
+        }
+      }
+    }
+  }
 }
 
 .flex-row {
@@ -35,17 +55,37 @@
       }
     }
   }
-}
-
-@each $name, $query in $m-queries {
-  @media screen and (min-width: $query) {
-    .flex {
+  @each $label, $map in $m-queries {
+    @media screen and (min-width: map-get($map, "since")) {
       @for $i from 1 through $m-grid {
         @for $j from 1 through $i {
-          > .space-l-#{$name}-#{$j}_#{$i} {
+          > .space-l-#{$j}_#{$i}-#{$label} {
+            margin-left: calc(100% * #{$j}/#{$i} + #{$m-spacebase} * .5);
+          }
+          > .space-r-#{$j}_#{$i}-#{$label} {
+            margin-right: calc(100% * #{$j}/#{$i} + #{$m-spacebase} * .5);
+          }
+          > .space--l-#{$j}_#{$i}-#{$label} {
+            margin-left: calc(0px - (100% * #{$j}/#{$i} + #{$m-spacebase} * .5));
+          }
+          > .space--r-#{$j}_#{$i} {
+            margin-right: calc(0px - (100% * #{$j}/#{$i} + #{$m-spacebase} * .5));
+          }
+        }
+      }
+    }
+  }
+}
+
+@each $label, $map in $m-queries {
+  @media screen and (min-width: map-get($map, "since")) {
+    .flex-#{$label} {
+      @for $i from 1 through $m-grid {
+        @for $j from 1 through $i {
+          > .space-l-#{$j}_#{$i} {
             margin-left: calc(100% * #{$j}/#{$i});
           }
-          > .space-r-#{$name}-#{$j}_#{$i} {
+          > .space-r-#{$j}_#{$i} {
             margin-right: calc(100% * #{$j}/#{$i});
           }
           > .space--l-#{$j}_#{$i} {
@@ -56,15 +96,35 @@
           }
         }
       }
+      @each $label, $map in $m-queries {
+        @media screen and (min-width: map-get($map, "since")) {
+          @for $i from 1 through $m-grid {
+            @for $j from 1 through $i {
+              > .space-l-#{$j}_#{$i}-#{$label} {
+                margin-left: calc(100% * #{$j}/#{$i});
+              }
+              > .space-r-#{$j}_#{$i}-#{$label} {
+                margin-right: calc(100% * #{$j}/#{$i});
+              }
+              > .space--l-#{$j}_#{$i}-#{$label} {
+                margin-left: calc(0px - (100% * #{$j}/#{$i}));
+              }
+              > .space--r-#{$j}_#{$i}-#{$label} {
+                margin-right: calc(0px - (100% * #{$j}/#{$i}));
+              }
+            }
+          }
+        }
+      }
     }
 
-    .flex-row {
+    .flex-row-#{$label} {
       @for $i from 1 through $m-grid {
         @for $j from 1 through $i {
-          > .space-l-#{$name}-#{$j}_#{$i} {
+          > .space-l-#{$j}_#{$i} {
             margin-left: calc(100% * #{$j}/#{$i} + #{$m-spacebase} * .5);
           }
-          > .space-r-#{$name}-#{$j}_#{$i} {
+          > .space-r-#{$j}_#{$i} {
             margin-right: calc(100% * #{$j}/#{$i} + #{$m-spacebase} * .5);
           }
           > .space--l-#{$j}_#{$i} {
@@ -72,6 +132,26 @@
           }
           > .space--r-#{$j}_#{$i} {
             margin-right: calc(0px - (100% * #{$j}/#{$i} + #{$m-spacebase} * .5));
+          }
+        }
+      }
+      @each $label, $map in $m-queries {
+        @media screen and (min-width: map-get($map, "since")) {
+          @for $i from 1 through $m-grid {
+            @for $j from 1 through $i {
+              > .space-l-#{$j}_#{$i}-#{$label} {
+                margin-left: calc(100% * #{$j}/#{$i} + #{$m-spacebase} * .5);
+              }
+              > .space-r-#{$j}_#{$i}-#{$label} {
+                margin-right: calc(100% * #{$j}/#{$i} + #{$m-spacebase} * .5);
+              }
+              > .space--l-#{$j}_#{$i}-#{$label} {
+                margin-left: calc(0px - (100% * #{$j}/#{$i} + #{$m-spacebase} * .5));
+              }
+              > .space--r-#{$j}_#{$i} {
+                margin-right: calc(0px - (100% * #{$j}/#{$i} + #{$m-spacebase} * .5));
+              }
+            }
           }
         }
       }
