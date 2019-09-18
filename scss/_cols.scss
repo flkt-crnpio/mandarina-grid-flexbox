@@ -26,11 +26,11 @@
       }
     }
   }
-  @each $name, $query in $m-queries {
-    @media screen and (min-width: $query) {
+  @each $label, $map in $m-queries {
+    @media screen and (min-width: map-get($map, "since")){
       @for $i from 1 through $m-grid {
         @for $j from 1 through $i {
-          > .col-#{$name}-#{$j}_#{$i} {
+          > .col-#{$j}_#{$i}-#{$label} {
             flex: 0 0 calc(100% * #{$j}/#{$i} - #{$m-spacebase});
             margin-left: $m-spacebase * .5;
             margin-right: $m-spacebase * .5;
@@ -42,9 +42,9 @@
   }
 }
 
-@each $name, $query in $m-queries {
-  @media screen and (min-width: $query) {
-    .flex-row-#{$name} {
+@each $label, $map in $m-queries {
+  @media screen and (min-width: map-get($map, "since") ) {
+    .flex-row-#{$label} {
       margin-left: - ($m-spacebase * .5);
       margin-right: - ($m-spacebase * .5);
       > .m {
@@ -71,11 +71,11 @@
           }
         }
       }
-      @each $name, $query in $m-queries {
-        @media screen and (min-width: $query) {
+      @each $label, $map in $m-queries {
+        @media screen and (min-width: map-get($map, "since")){
           @for $i from 1 through $m-grid {
             @for $j from 1 through $i {
-              > .col-#{$name}-#{$j}_#{$i} {
+              > .col-#{$j}_#{$i}-#{$label} {
                 flex: 0 0 calc(100% * #{$j}/#{$i} - #{$m-spacebase});
                 margin-left: $m-spacebase * .5;
                 margin-right: $m-spacebase * .5;
@@ -104,11 +104,11 @@
       }
     }
   }
-  @each $name, $query in $m-queries {
-    @media screen and (min-width: $query) {
+  @each $label, $map in $m-queries {
+    @media screen and (min-width: map-get($map, "since")) {
       @for $i from 1 through $m-grid {
         @for $j from 1 through $i {
-          > .col-#{$name}-#{$j}_#{$i} {
+          > .col-#{$j}_#{$i}-#{$label} {
             flex: 0 0 calc(100% * #{$j}/#{$i});
             max-width: calc(100% * #{$j}/#{$i});
           }
@@ -118,9 +118,9 @@
   }
 }
 
-@each $name, $query in $m-queries {
-  @media screen and (min-width: $query) {
-    .flex-#{$name} {
+@each $label, $map in $m-queries {
+  @media screen and (min-width: map-get($map, "since")) {
+    .flex-#{$label} {
       > .col-0 {
         flex: 0 0;
       }
@@ -135,11 +135,11 @@
           }
         }
       }
-      @each $name, $query in $m-queries {
-        @media screen and (min-width: $query) {
+      @each $label, $map in $m-queries {
+        @media screen and (min-width: map-get($map, "since")) {
           @for $i from 1 through $m-grid {
             @for $j from 1 through $i {
-              > .col-#{$name}-#{$j}_#{$i} {
+              > .col-#{$j}_#{$i}-#{$label} {
                 flex: 0 0 calc(100% * #{$j}/#{$i});
                 max-width: calc(100% * #{$j}/#{$i});
               }
