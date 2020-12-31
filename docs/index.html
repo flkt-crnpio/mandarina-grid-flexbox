@@ -6,7 +6,7 @@
   <meta name="googlebot" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Mol Grid</title>
-  <link rel="stylesheet" href="mol.normalize.css">
+  <link rel="stylesheet" href="mol.normalize.min.css">
   <link rel="stylesheet" href="grid.css">
   <style media="screen">
     .flex > div,
@@ -22,6 +22,9 @@
     }
     .text-center {
       text-align: center;
+    }
+    code {
+      background: rgba(0,0,255,0.255)
     }
   </style>
 </head>
@@ -253,14 +256,14 @@
         </div>
       </div>
       <div class="flex-row m-y-1 text-center">
-        <div class="col-2_5">
-          <p class="m-1">.col-2_5</p>
+        <div class="col-1_5">
+          <p class="m-1">.col-1_5</p>
         </div>
         <div class="col-2_5 space--l-2_5">
           <p class="m-1">.col-1_5 .space--l-2_5</p>
         </div>
-        <div class="col-1_5">
-          <p class="m-1">.col-1_5</p>
+        <div class="col-1_5 space-l-1_5">
+          <p class="m-1">.col-1_5 space-l-1_5</p>
         </div>
         <div class="col-1_5">
           <p class="m-1">.col-1_5</p>
@@ -285,19 +288,19 @@
     <div class="container-x">
       <code>.flex .x-between</code>
       <div class="flex x-between m-y-1">
-        <div class="">
+        <div>
           <p>div Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
-        <div class="">
+        <div>
           <p>div</p>
         </div>
-        <div class="">
+        <div>
           <p>div ...</p>
         </div>
-        <div class="">
+        <div>
           <p>div Lorem ipsum dolor sit amet</p>
         </div>
-        <div class="">
+        <div>
           <p>div</p>
         </div>
       </div>
@@ -345,11 +348,9 @@
     </div>
 
     <div class="container-x">
-      <div class="m-y-1">
-        <span class="p-1 m-1 show-block-in-laptop">span.show-block-in-laptop</span>
-        <span class="p-1 m-1 show-block-since-laptop">span.show-block-since-laptop</span>
-        <span class="p-1 m-1 show-block-until-laptop">span.show-block-until-laptop</span>
-      </div>
+      <span class="p-1 m-y-1 show-block-in-laptop">span.show-block-in-laptop</span>
+      <span class="p-1 m-y-1 show-block-since-laptop">span.show-block-since-laptop</span>
+      <span class="p-1 m-y-1 show-block-until-laptop">span.show-block-until-laptop</span>
     </div>
 
   </div>
