@@ -1,4 +1,3 @@
-// mol.normalize // mol.grid
 $m-queries: (
   "phone": (
     "since": 320px,
@@ -42,10 +41,8 @@ $m-queries: (
   )
 );
 
-// mol.core // mol.grid
 $m-spacelement: 20px;
 
-// mol.grid
 $m-spacebase: 40px;
 $m-spacevariations: 10;
 $m-grid: 10;
