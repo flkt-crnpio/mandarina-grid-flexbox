@@ -1,21 +1,18 @@
 {
   "name": "mol.grid",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "flexbox grid module for mol project",
   "scripts": {
-    "dist": "sass scss/grid.scss:dist/grid.min.css --style compressed",
-    "docs": "npm run scss | npm run start",
-    "start": "browser-sync start --server 'docs' --files 'docs'",
-    "scss": "sass --watch scss/grid.scss:docs/grid.css --style expanded"
+    "start": "npm run scss | npm run browsersync",
+    "browsersync": "browser-sync start --server 'docs' --files 'docs'",
+    "scss": "sass --watch scss/grid.scss:docs/grid.css --style expanded",
+    "dist": "sass scss/grid.scss:dist/grid.min.css --style compressed"
   },
   "keywords": [
     "mol",
     "mol-project",
-    "css",
-    "sass",
     "scss",
     "scss-module",
-    "grid",
     "flexbox"
   ],
   "repository": {
@@ -28,6 +25,6 @@
     "url": "https://github.com/mol-project/mol.grid/issues"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.13"
   }
 }
